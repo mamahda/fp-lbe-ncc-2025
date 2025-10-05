@@ -1,0 +1,17 @@
+{
+  "name": "fp-ncc",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.8.0",
+    "@azure/storage-blob": "^12.28.0",
+    "pg": "^8.16.3"
+  },
+  "main": "src/{index.js,functions/*.js}",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
