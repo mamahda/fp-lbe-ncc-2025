@@ -75,14 +75,14 @@ app.http('httpTrigger1', {
             // TODO: Handle return jika user tidak ditemukan dengan pesan error
             return {
               status: 404,
-              body: JSON.stringify({ error: 'User not found' })
+              body: JSON.stringify({ error: 'Belum ada user yang terdaftar' })
             }
           }
 
           // TODO: Return data user berdasarkan ID dengan message success
           return {
             status: 200,
-            body: JSON.stringify({ message: 'success', data: result.rows[0] })
+            body: JSON.stringify({ message: 'User ditemukan', data: result.rows[0] })
           }
         } else {
           const result = await client.query('SELECT id, nama, foto_url FROM users ORDER BY id ASC');
@@ -91,7 +91,7 @@ app.http('httpTrigger1', {
           // TODO: Return semua data user dengan message success dan total data
           return {
             status: 200,
-            body: JSON.stringify({ message: 'success', total: result.rows.length, data: result.rows })
+            body: JSON.stringify({ message: 'Daftar semua user', total: result.rows.length, data: result.rows })
           }
         }
 
@@ -108,7 +108,7 @@ app.http('httpTrigger1', {
             // TODO: Handle return jika nama tidak diisi dengan pesan error
             return {
               status: 400,
-              body: JSON.stringify({ error: 'Nama is required' })
+              body: JSON.stringify({ error: 'Nama harus diisi' })
             }
           }
 
@@ -128,7 +128,7 @@ app.http('httpTrigger1', {
           // TODO: Return data user yang baru ditambahkan dengan message success
           return {
             status: 201,
-            body: JSON.stringify({ message: 'success', data: result.rows[0] })
+              body: JSON.stringify({ message: 'User berhasil ditambahkan', data: result.rows[0] })
           }
 
         } else {
@@ -140,7 +140,7 @@ app.http('httpTrigger1', {
             // TODO: Handle return jika nama tidak diisi dengan pesan error
             return {
               status: 400,
-              body: JSON.stringify({ error: 'Nama is required' })
+              body: JSON.stringify({ error: 'Nama harus diisi' })
             }
           }
 
@@ -153,7 +153,7 @@ app.http('httpTrigger1', {
           // TODO: Return data user yang baru ditambahkan
           return {
             status: 201,
-            body: JSON.stringify({ message: 'success', data: result.rows[0] })
+            body: JSON.stringify({ message: 'User berhasil ditambahkan', data: result.rows[0] })
           }
         }
 
@@ -166,7 +166,7 @@ app.http('httpTrigger1', {
           // TODO: Handle return jika ID tidak diisi dengan pesan error
           return {
             status: 400,
-            body: JSON.stringify({ error: 'User ID is required' })
+            body: JSON.stringify({ error: 'ID harus diisi' })
           }
         }
 
@@ -176,7 +176,7 @@ app.http('httpTrigger1', {
           // TODO: Handle return jika user tidak ditemukan dengan pesan error
           return {
             status: 404,
-            body: JSON.stringify({ error: 'User not found' })
+            body: JSON.stringify({ error: 'User tidak ditemukan' })
           }
         }
 
@@ -205,7 +205,7 @@ app.http('httpTrigger1', {
           // TODO: Handle return jika nama tidak diisi dengan pesan error
           return {
             status: 400,
-            body: JSON.stringify({ error: 'Nama is required' })
+            body: JSON.stringify({ error: 'Nama harus diisi' })
           }
         }
 
@@ -218,7 +218,7 @@ app.http('httpTrigger1', {
         // TODO: Return data user yang telah diperbarui dengan message success
         return {
           status: 200,
-          body: JSON.stringify({ message: 'success', data: result.rows[0] })
+          body: JSON.stringify({ message: 'User berhasil diperbarui', data: result.rows[0] })
         }
 
       } else if (method === 'DELETE') {
@@ -229,7 +229,7 @@ app.http('httpTrigger1', {
           // TODO: Handle return jika ID tidak diisi dengan pesan error
           return {
             status: 400,
-            body: JSON.stringify({ error: 'User ID is required' })
+            body: JSON.stringify({ error: 'ID harus diisi' })
           }
         }
 
@@ -243,7 +243,7 @@ app.http('httpTrigger1', {
           // TODO: Handle return jika user tidak ditemukan dengan pesan error
           return {
             status: 404,
-            body: JSON.stringify({ error: 'User not found' })
+            body: JSON.stringify({ error: 'User tidak ditemukan' })
           }
         }
 
@@ -256,7 +256,7 @@ app.http('httpTrigger1', {
         // TODO: Return data user yang telah dihapus dengan message success
         return {
           status: 200,
-          body: JSON.stringify({ message: 'success', data: result.rows[0] })
+          body: JSON.stringify({ message: 'User berhasil dihapus', data: result.rows[0] })
         }
       }
 
