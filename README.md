@@ -15,7 +15,7 @@ Aplikasi ini akan memiliki arsitektur sebagai berikut:
 - **Database**: Menggunakan **Azure Database for PostgreSQL Flexible Server** untuk menyimpan data aplikasi.
 - **Backend API**: Dijalankan oleh **Azure Functions** sebagai layanan _serverless_.
 
-![Arsitektur Final Project](assets/fp-lbe-ncc.png)
+![Arsitektur Final Project](assets/arsitektur.png)
 
 ---
 
@@ -133,9 +133,6 @@ Jika ingin menguji backend secara lokal sebelum deploy:
   2.  Buka panel **Azure** dari Activity Bar.
   3.  Pada bagian bawah terdapat section **WORKSPACE**.
   4.  Tekan ikon **Deploy** (panah ke atas) di sebelah kanan header **Local Project**.
-
-      ![Workspace](assets/workspace.png)
-
   5.  Pilih Function App yang sudah kalian buat di Azure Portal.
   6.  Tunggu hingga proses deployment selesai.
 
